@@ -24,19 +24,18 @@ void Voto_do_telespectador(float Votos_em_cada_jogador[24])
     {
         cout << "Digite o numero do jogador a ser voltado. Digite 0 para encerrar o programa.\n" << endl;
         cin >> Numero_do_Jogador;
-        if (Numero_do_Jogador < 0 || Numero_do_Jogador > 23)
-        {
+        if (Numero_do_Jogador < 0 || Numero_do_Jogador > 23){
             cout << "O numero digitado e inválido.\n" << endl;
             cin >> Numero_do_Jogador;
         }else{
-        Numero_de_votos++;
-        Votos_em_cada_jogador[Numero_do_Jogador]++;
+            Numero_de_votos++;
+            Votos_em_cada_jogador[Numero_do_Jogador]++;
         }
     }
     Numero_de_votos--;
 }
 void Total_de_votos(float Numero_de_votos){
-    cout << "\n\nNumero total de votos: " << endl;
+     cout << "\n\nNumero total de votos: " << endl;
      cout << "-------------------------------------------------------------" << endl << endl;
      cout << Numero_de_votos << endl;
       cout << "-------------------------------------------------------------" << endl;
@@ -44,7 +43,6 @@ void Total_de_votos(float Numero_de_votos){
     MeuArquivo << "Numero total de votos: " << Numero_de_votos << endl;
     Fechar();
 }
-
 void Numero_de_votos_de_cada_jogador(float Votos_em_cada_jogador[24]){
    Abrir();
    MeuArquivo << "O número de votos de cada jogador foi:\n" << endl;

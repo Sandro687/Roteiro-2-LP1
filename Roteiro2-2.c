@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 void preencherBanda();
 void printaBanda();
@@ -16,24 +16,14 @@ void nomebanda();
         int numero_integrantes;
         int ranking;
         };
-
     typedef struct banda Bandas;
-
-
-
 
     Bandas vetBandas[4];
 
     void main(void){
-
     menu();
-
     }
-
-
   void funcaoRanking(){
-
-
       int ranking_teclado=0;
       register int y=0;
       printf("\nInsira o numero de ranking. 1 A 5 : \n"); 
@@ -46,11 +36,9 @@ void nomebanda();
                 printf("\estilo: %s\n", vetBandas[y].estilo);
                 printf("\nNumero de integrantes: %d\n", vetBandas[y].numero_integrantes);
                 printf("\Ranking: %d\n", vetBandas[y].ranking);
-
             }
         }
     }
-
     void estilomusica(){
         char estilo_teclado[10];
         register int y=0;

@@ -35,7 +35,7 @@ void nomebanda();
                 printf("\nNome: %s\n", vetBandas[y].nome);
                 printf("\estilo: %s\n", vetBandas[y].estilo);
                 printf("\nNumero de integrantes: %d\n", vetBandas[y].numero_integrantes);
-                printf("\Ranking: %d\n", vetBandas[y].ranking);
+                printf("\nRanking: %d\n", vetBandas[y].ranking);
             }
         }
     }

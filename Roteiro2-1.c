@@ -1,8 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <math.h>
-
 
  typedef struct{
         char nome [30];
@@ -13,33 +11,34 @@
 
     tAluno gAlunos[100];
 
-unsigned int consultaAlunosPorCurso(){
+unsigned int ConsultaAlunosPorCurso(char *curso){
     int i, t = 0;
-    char curso[30];
 
-    printf("Digite o curso a ser procurado.\n");
-    scanf("%s", &curso[30]);
-    for (i = 0; i <= 100; i++){
-        if (curso[30] == gAlunos[i].curso[30]){
+    for (i = 0; i < 100; i++){
+        if(strcmp(gAlunos[i].curso, curso) == 0){
             t++;
         }
     }
-    printf("%d alunos estao matriculados no curso procurado.\n", t);
+    return t;
 }
 
 int main(void){
 
     int i;
+    char curso[30];
 
     for(i = 0; i < 2; i++){
         printf("Registro de alunos. Digite o nome do aluno %d de Computacao.\n", i+1);
-        scanf("%s", &gAlunos[i].nome[30]);
-        //printf("%s\n", gAlunos[i].nome[30]);
+        gets(gAlunos[i].nome);
         gAlunos[i].curso[30] = "Computacao";
     }
     printf("Registro de alunos. Digite o nome do aluno %d de Fisica.\n", 1);
-    scanf ("%s", &gAlunos[2].nome[30]);
+        gets(gAlunos[4].nome);
+        gAlunos[i].curso[30] = "Fisica";
+    printf("Qual curso deseja procurar?\n");
+        gets(curso);
 
-    consultaAlunosPorCurso();
+    printf("Existem %d alunos cursando dito curso.\n", ConsultaAlunosPorCurso(curso));
+
 return 0;
 }
